@@ -12,7 +12,7 @@ public class Person {
         this.lastName = lastName;
     }
 
-    // why is this called a GETTER??
+    // why is this called a GETTER?? we can access firstname and lastname through this methods
     public String getFirstName() {
         return firstName;
     }
@@ -21,7 +21,7 @@ public class Person {
         return lastName;
     }
 
-    @Override // why is Override here??
+    @Override // why is Override here?? To provide fullname
     public String toString() {
         return new StringBuilder()
                 .append("\nMy first name is " + firstName)

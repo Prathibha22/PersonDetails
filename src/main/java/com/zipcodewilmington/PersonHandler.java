@@ -14,41 +14,46 @@ public class PersonHandler {
     // simple lines of code...
     
     public String whileLoop() {
-        String result = "";
+       StringBuilder sb=new StringBuilder();
         // create a `counter`
+        int counter=0;
         // while `counter` is less than length of array
             // begin loop
-
                 // use `counter` to identify the `current Person` in the array
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
-
+        while (counter< personArray.length){
+         sb.append("\nMy first name is " +personArray[counter].getFirstName()+ "\n" + "My last name is "
+                 +personArray[counter].getLastName());
+         counter++;
+        }
             // end loop
-        return result;
+        return sb.toString();
     }
 
-
-
     public String forLoop() {
-        String result = "";
+        StringBuilder sb = new StringBuilder();
         // identify initial value
         // identify terminal condition
         // identify increment
 
         // use the above clauses to declare for-loop signature
-            // begin loop
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-            // end loop
+        // begin loop
+        // use `counter` to identify the `current Person` in the array
+        // get `string Representation` of `currentPerson`
+        // append `stringRepresentation` to `result` variable
+        for (int counter = 0; counter < personArray.length; counter++) {
+            sb.append("\nMy first name is " +personArray[counter].getFirstName()+ "\n" + "My last name is "
+                    +personArray[counter].getLastName());
+        }
 
-        return result;
+        // end loop
+
+        return sb.toString();
     }
 
-
-
     public String forEachLoop() {
-        String result = "";
+        StringBuilder sb=new StringBuilder();
         // identify array's type
         // identify array's variable-name
 
@@ -56,12 +61,13 @@ public class PersonHandler {
             // begin loop
                 // get `string Representation` of `currentPerson`
                 // append `stringRepresentation` to `result` variable
+        for(Person name:personArray)
+        sb.append("\nMy first name is " +name.getFirstName()+ "\n" + "My last name is "
+                +name.getLastName());
             // end loop
 
-        return result;
+        return sb.toString();
     }
-
-
     public Person[] getPersonArray() {
         return personArray;
     }
